@@ -2,6 +2,7 @@ import math as m
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+import keras
 from tabtransformertf.utils.helper import corrupt_dataset
 from tqdm import tqdm
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
@@ -152,7 +153,7 @@ class PLE(tf.keras.layers.Layer):
 
         return enc
 
-class Periodic(tf.keras.layers.Layer):
+class Periodic(keras.layers.Layer):
   def __init__(self, emb_dim, n_bins=50, sigma=5):
       super(Periodic, self).__init__()
       self.n_bins = n_bins
