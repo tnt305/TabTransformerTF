@@ -13,7 +13,7 @@ def build_mlp(input_dim, factors, dropout):
         mlp_layers.append(Dense(units, activation=selu))
         mlp_layers.append(Dropout(dropout))
 
-    return tf.keras.Sequential(mlp_layers)
+    return keras.Sequential(mlp_layers)
 
 
 def generate_mask(x, p_replace=0.2):
