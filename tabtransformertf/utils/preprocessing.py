@@ -39,7 +39,7 @@ def df_to_dataset(
 def build_categorical_prep(data: pd.DataFrame, categorical_features: list):
     category_prep_layers = {}
     for c in tqdm(categorical_features):
-        lookup = tf.keras.layers.StringLookup(vocabulary=data[c].unique())
+        lookup = keras.layers.StringLookup(vocabulary=data[c].unique())
         category_prep_layers[c] = lookup
 
     return category_prep_layers
