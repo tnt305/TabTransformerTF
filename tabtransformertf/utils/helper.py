@@ -1,7 +1,7 @@
 import numpy as np
-import tensorflow as tf
-from tensorflow.keras.activations import selu
-from tensorflow.keras.layers import BatchNormalization, Dense, Dropout
+# import tensorflow as tf
+from keras.activations import selu
+from keras.layers import BatchNormalization, Dense, Dropout
 import matplotlib.pyplot as plt
 
 def build_mlp(input_dim, factors, dropout):
